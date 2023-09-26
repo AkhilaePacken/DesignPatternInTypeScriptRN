@@ -7,9 +7,9 @@ const ThemeFactory: React.FC<{theme: 'light' | 'dark'}> = ({theme}) => {
   let themeFactory: ITheme;
 
   if (theme === 'light') {
-    themeFactory = new LightThemeFactory();
+    themeFactory = LightThemeFactory();
   } else {
-    themeFactory = new DarkThemeFactory();
+    themeFactory = DarkThemeFactory();
   }
 
   const Button = themeFactory.createButton();

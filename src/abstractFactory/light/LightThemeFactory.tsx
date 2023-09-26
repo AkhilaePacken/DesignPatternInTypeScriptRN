@@ -6,19 +6,21 @@ import styles from '../styles';
 // LightTheme factory
 
 const LightThemeFactory = (): ITheme => ({
-  createButton(): React.FC {
-    return () => (
-      <View style={styles.lightButton}>
-        <Text style={styles.lightButtonText}>Light Button</Text>
-      </View>
-    );
-  },
-  createHeader(): React.FC {
-    return () => (
+  createHeader: () => {
+    const LightHeader: React.FC = ({}) => (
       <View style={styles.lightHeader}>
         <Text>Light Header</Text>
       </View>
     );
+    return LightHeader;
+  },
+  createButton: () => {
+    const LightButton: React.FC = ({}) => (
+      <View style={styles.lightButton}>
+        <Text style={styles.lightButtonText}>Light Button</Text>
+      </View>
+    );
+    return LightButton;
   },
 });
 
