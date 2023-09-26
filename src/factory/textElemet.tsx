@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {IUserText} from './userProps';
+import {ITextElement} from './elementProps';
 import styles from './styles';
-const UserText = ({text}: IUserText) => {
+const TextElement = ({text}: ITextElement) => {
   return (
     <View style={styles.container}>
       <Text>{text}</Text>
@@ -10,4 +10,4 @@ const UserText = ({text}: IUserText) => {
   );
 };
 
-export default UserText;
+export default TextElement;

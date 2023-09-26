@@ -1,2 +1,2 @@
-export {default} from './userFactory';
-export * from './userProps';
+export {default} from './elementFactory';
+export * from './elementProps';

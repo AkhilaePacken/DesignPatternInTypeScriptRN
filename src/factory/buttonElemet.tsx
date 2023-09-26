@@ -1,8 +1,8 @@
 import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {IUserButton} from './userProps';
+import {IButtonElement} from './elementProps';
 import styles from './styles';
-const UserButton = ({buttonText, onClick}: IUserButton) => {
+const ButtonElement = ({buttonText, onClick}: IButtonElement) => {
   return (
     <TouchableOpacity style={styles.buttonView} onPress={onClick}>
       <Text style={styles.buttonTextStyle}>{buttonText}</Text>
@@ -10,4 +10,4 @@ const UserButton = ({buttonText, onClick}: IUserButton) => {
   );
 };
 
-export default UserButton;
+export default ButtonElement;

@@ -6,14 +6,14 @@ interface IElemet {
   text?: string;
 }
 //  for  text
-interface IUserText {
+interface ITextElement {
   text: string | undefined;
 }
 
 // for button
-interface IUserButton {
+interface IButtonElement {
   buttonText: string | undefined;
   onClick?: () => void;
 }
 
-export type {IUserText, IUserButton, IElemet};
+export type {ITextElement, IButtonElement, IElemet};
