@@ -1,17 +1,18 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View} from 'react-native';
 import {ITheme} from '../factoryProps';
 import styles from '../styles';
 
 // DarkTheme factory
-class DarkThemeFactory implements ITheme {
+
+const DarkThemeFactory = (): ITheme => ({
   createButton(): React.FC {
     return () => (
       <View style={styles.darkButton}>
-        <Text>Dark Button</Text>
+        <Text style={styles.darkButtonText}>Dark Button</Text>
       </View>
     );
-  }
+  },
 
   createHeader(): React.FC {
     return () => (
@@ -19,7 +20,6 @@ class DarkThemeFactory implements ITheme {
         <Text>Dark Header</Text>
       </View>
     );
-  }
-}
-
+  },
+});
 export {DarkThemeFactory};

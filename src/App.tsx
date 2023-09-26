@@ -5,45 +5,24 @@
  * @format
  */
 
-import React from 'react';
-import {View} from 'react-native';
+import React, {useState} from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
 import Factory from './factory';
 import styles from './factory/styles';
 import AbstractFactory from './abstractFactory';
-const data = [
-  {
-    type: 'text',
-    text: 'Click on',
-    buttonText: '',
-  },
-  {
-    type: 'button',
-    text: '',
-    buttonText: 'Confirm',
-  },
-];
+
 function App(): JSX.Element {
+  const [isTheme, setTheme] = useState<boolean>(false);
   return (
     <View style={styles.mainContainer}>
-      {/* We can map the compoenet using Json */}
-      {data.map((i: any, index: number) => (
-        <Factory
-          key={index}
-          type={i.type}
-          text={i?.text}
-          buttonText={i?.buttonText}
-        />
-      ))}
-      {/* We can directly use the compoennts */}
-      <Factory type={'text'} text="click the buttton" />
-      <Factory
-        type={'button'}
-        buttonText="Ok"
-        onClick={() => console.log('on click')}
-      />
       {/* abstractFactory */}
-      <AbstractFactory theme={'light'} />
-      <AbstractFactory theme={'dark'} />
+      <TouchableOpacity
+        style={styles.themeStyle}
+        onPress={() => setTheme(!isTheme)}>
+        <Text>{isTheme ? 'Dark mode' : 'Light mode'}</Text>
+      </TouchableOpacity>
+
+      <AbstractFactory theme={isTheme ? 'light' : 'dark'} />
     </View>
   );
 }

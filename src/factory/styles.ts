@@ -22,5 +22,8 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#000',
   },
+  themeStyle: {
+    padding: 20,
+  },
 });
 export default styles;
