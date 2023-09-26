@@ -9,6 +9,7 @@ import React from 'react';
 import {View} from 'react-native';
 import Factory from './factory';
 import styles from './factory/styles';
+import AbstractFactory from './abstractFactory';
 const data = [
   {
     type: 'text',
@@ -40,6 +41,9 @@ function App(): JSX.Element {
         buttonText="Ok"
         onClick={() => console.log('on click')}
       />
+      {/* abstractFactory */}
+      <AbstractFactory theme={'light'} />
+      <AbstractFactory theme={'dark'} />
     </View>
   );
 }
