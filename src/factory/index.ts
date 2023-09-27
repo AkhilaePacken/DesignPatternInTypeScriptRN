@@ -1,2 +1,2 @@
-export {default} from './elementFactory';
-export * from './elementProps';
+export {default} from './ElementFactory';
+export * from './ElementProps';

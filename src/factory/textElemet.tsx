@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {ITextElement} from './elementProps';
+import {ITextElement} from './ElementProps';
 import styles from './styles';
 const TextElement = ({text}: ITextElement) => {
   return (
