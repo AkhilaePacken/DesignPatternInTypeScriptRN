@@ -8,13 +8,13 @@
 import React from 'react';
 import {View} from 'react-native';
 import styles from './factory/styles';
-import BuilderPatttern from './builderPattern';
+import PrototypePattern from './prototypePattern';
 
 function App(): JSX.Element {
   return (
     <View style={styles.mainContainer}>
-      {/* Builder pattern */}
-      <BuilderPatttern />
+      {/* prototype Pattern */}
+      <PrototypePattern />
     </View>
   );
 }
