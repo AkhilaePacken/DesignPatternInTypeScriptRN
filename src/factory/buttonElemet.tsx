@@ -1,6 +1,6 @@
 import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {IButtonElement} from './elementProps';
+import {IButtonElement} from './ElementProps';
 import styles from './styles';
 const ButtonElement = ({buttonText, onClick}: IButtonElement) => {
   return (

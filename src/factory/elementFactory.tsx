@@ -1,7 +1,7 @@
 import React from 'react';
-import {IElemet} from './elementProps';
-import TextElement from './textElemet';
-import ButtonElement from './buttonElemet';
+import {IElemet} from './ElementProps';
+import TextElement from './TextElemet';
+import ButtonElement from './ButtonElemet';
 
 const ElementFactory = ({type, text, buttonText}: IElemet) => {
   switch (type) {
